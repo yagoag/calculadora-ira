@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calculadora IRA</title>
+<link href="style.css" media="all" rel="Stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="calculadora.js"></script>
+
+<div id="cabecalho">
+	<div id="titulo">Calculadora IRA</div>
+	Seu IRA: <input id="ira" type="textbox" value="20000" disabled />
+	<input value="Calcular IRA" id="botao-calcula-ira" type="button" onclick="calcula_ira()" />
+</div>
+
+<div id="calculadora">
+	<!-- table header -->
+	<div class="nome-semestre">
+		<p></p>
+	</div>
+	<div class="disciplina">
+		<p>Disciplina</p>
+	</div>
+	<div class="nota">
+		<p>Nota</p>
+	</div>
+	<div class="creditos">
+		<p>Créditos</p>
+	</div>
+	<div class="situacao">
+		<p>Situação <span class="help" title="Situação dos Créditos - C: Cursados, S: Suspensos, D: Desistentes">(?)</span></p>
+	</div>
+	<br class="clear" />
+
+	<div id="semestre-1" class="semestre sem-a">
+		<div class="nome-semestre">
+			20<input type="textbox" class="ano sem-a" />/<input type="textbox" class="sem sem-a" />
+		</div>
+		<div class="disciplina a">
+			<p><input id="disciplina-1" type="textbox" /></p>
+		</div>
+		<div class="nota a">
+			<p><input id="nota-1" type="textbox" /></p>
+		</div>
+		<div class="creditos a">
+			<p><input id="creditos-1" type="textbox" /></p>
+		</div>
+		<div class="situacao a">
+			<p><input type="radio" name="situacao-1" value="cursados" checked /> C <input type="radio" name="situacao-1" value="suspensos" /> S <input type="radio" name="situacao-1" value="desistentes" /> D</p>
+		</div>
+
+		<br class="clear" />
+		<p class="alinhamento-direita"><input value="Adicionar Disciplina" class="botao-nova-disciplina" type="button" onclick="adicionar_disciplina(1)" /></p>
+	</div>
+</div>
+
+<input value="Adicionar Semestre" id="botao-novo-semestre" type="button" onclick="adicionar_semestre()" />
+<br />
+<div id="rodape">
+	<p>Calculadora IRA UFSCar</p>
+	<p>Desenvolvida por <span class="help" title="yagoag@gmail.com">Yago Arroyo</a></p>
+	<p><a href="http://facebook.com/yagoag" target="_blank">Facebook</a> : <a href="http://github.com/yagoag" target="_blank">GitHub</a></p>
+</div>
+
+</html>

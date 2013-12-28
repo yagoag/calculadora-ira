@@ -1,0 +1,189 @@
+/* font import */
+@font-face {
+	font-family: "Humanst521 Lt BT";
+	src: url("fonts/tt0288m.ttf");
+}
+
+* {
+	/* padding and margin reset */
+	padding: 0;
+	margin: 0;
+
+	/* default font definition */
+	font-family: "Humanst521 Lt BT", "Calibri Light", sans-serif;
+	font-size: 16px;
+}
+
+body {
+	background: #f1f9ff;
+	text-align: center;
+}
+
+input[type=button] {
+	background: rgba(255, 255, 255, .25);
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	padding: 3px 10px;
+}
+
+input[type=button]:hover {
+	background: rgba(255, 255, 255, .4);
+}
+
+#cabecalho {
+	margin: 15px auto;
+	text-align: center;
+	width: 742px;
+	background: url("images/ufscar-logo.png") no-repeat #bee3ff;
+	padding: 20px 0;
+}
+
+#proper-cabecalho {
+	margin: 0 auto;
+	width: 350px;
+}
+
+#titulo {
+	margin: 15px 0;
+	font-size: 30px;
+}
+
+#calculadora {
+	margin: 0 auto 10px auto;
+	width: 742px;
+	text-align: left;
+}
+
+#calculadora input {
+	border: none 1px #ccc;
+	border-bottom-style: solid;
+	background: none;
+	width: auto;
+	padding: 0 3px;
+}
+
+#calculadora p {
+	height: 20px;
+	margin: 3px 0;
+}
+
+.help {
+	border-bottom: 1px dotted;
+}
+
+.semestre {
+	margin: 0 0 7px 0;
+	padding: 0 0 7px 0;
+	border-left: 1px solid;
+}
+
+.nome-semestre {
+	font-size: 26px;
+	width: 120px;
+	height: auto;
+	padding: 0 0 0 15px;
+	float: left;
+}
+
+.a {
+	background: #ffe7b0;
+}
+
+.b {
+	background: #d7eeff;
+}
+
+.sem-a {
+	color: #d9bb84;
+	border-style: #d9bb84;
+}
+
+.sem-b {
+	color: #84a8d9;
+	border-style: #84a8d9;
+}
+
+.disciplina, .nota, .creditos, .situacao {
+	color: #000;
+	margin: 0 4px 0 0;
+	padding: 5px;
+	float: left;
+}
+
+.disciplina {
+	width: 300px;
+	
+}
+
+.disciplina input {
+	min-width: 294px;
+}
+
+.nota, .creditos {
+	width: 75px;
+}
+
+.nota input, .creditos input {
+	max-width: 70px;
+}
+
+.situacao {
+	width: 100px;
+}
+
+.clear {
+	clear: both;
+}
+
+.botao-nova-disciplina {
+	cursor: pointer;
+	min-width: 603px;
+	margin: 3px 0 7px 0;
+}
+
+.alinhamento-direita {
+	text-align: right;
+}
+
+.ano, .sem {
+	font-size: 26px;
+}
+
+.ano {
+	max-width: 28px;
+}
+
+.sem {
+	max-width: 14px;
+}
+
+#botao-novo-semestre {
+	min-width: 742px;
+	margin: 0 auto;
+}
+
+#rodape {
+	width: 722px;
+	margin: 25px auto;
+	padding: 5px 10px 0 10px;
+	border-top: 1px dotted #ccc;
+	color: #aaa;
+	text-align: left;	
+}
+
+#rodape p {
+	margin: 0;
+	font-size: 14px;
+	height: auto
+}
+
+#rodape a {
+	font-size: 14px;
+	text-decoration: none;
+	color: #8cbfe5;
+}
+
+#rodape .help {
+	font-size: 14px;
+}
