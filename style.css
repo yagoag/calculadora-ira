@@ -19,6 +19,12 @@ body {
 	text-align: center;
 }
 
+input[type=textbox] {
+	background: #eee;
+	border: 1px solid #ccc;
+	padding: 3px 10px;
+}
+
 input[type=button] {
 	background: rgba(255, 255, 255, .25);
 	border-radius: 3px;
@@ -66,6 +72,15 @@ input[type=button]:hover {
 #calculadora p {
 	height: 20px;
 	margin: 3px 0;
+}
+
+#aviso {
+	background: #f03c3c url('images/aviso.png') no-repeat;
+	color: #fff;
+	border: 1px solid #b40c0c;
+	padding: 3px 10px;
+	margin: 15px auto;
+	width: 722px;
 }
 
 .help {

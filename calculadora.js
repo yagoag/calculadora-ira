@@ -7,17 +7,21 @@ set_num_sem = function(n, s) {
 }
 
 adicionar_disciplina = function(semestre) {
-	var conteudo = '<p><input id="disciplina-'+num+'" type="textbox" /></p>';
+	var conteudo = $('<p><input id="disciplina-'+num+'" type="textbox" /></p>').hide();
 	$("#semestre-"+semestre+" .disciplina").append(conteudo);
+	conteudo.show('normal');
 
-	conteudo = '<p><input id="nota-'+num+'" type="textbox" /></p>';
+	conteudo = $('<p><input id="nota-'+num+'" type="textbox" /></p>').hide();
 	$("#semestre-"+semestre+" .nota").append(conteudo);
+	conteudo.show('normal');
 
-	conteudo = '<p><input id="creditos-'+num+'" type="textbox" /></p>';
+	conteudo = $('<p><input id="creditos-'+num+'" type="textbox" /></p>').hide();
 	$("#semestre-"+semestre+" .creditos").append(conteudo);
+	conteudo.show('normal');
 
-	conteudo = '<p><input type="radio" name="situacao-'+num+'" value="cursados" checked /> C <input type="radio" name="situacao-'+num+'" value="suspensos" /> S <input type="radio" name="situacao-'+num+'" value="desistentes" /> D</p>';
+	conteudo = $('<p><input type="radio" name="situacao-'+num+'" value="cursados" checked /> C <input type="radio" name="situacao-'+num+'" value="suspensos" /> S <input type="radio" name="situacao-'+num+'" value="desistentes" /> D</p>').hide();
 	$("#semestre-"+semestre+" .situacao").append(conteudo);
+	conteudo.show('normal');
 
 	num++;
 }
@@ -29,8 +33,9 @@ adicionar_semestre = function() {
 	else
 		cor = 'b';
 
-	var conteudo = '<div id="semestre-'+sem+'" class="semestre sem-'+cor+'"><div class="nome-semestre">20<input type="textbox" class="ano sem-'+cor+'" />/<input type="textbox" class="sem sem-'+cor+'" /></div><div class="disciplina '+cor+'"></div><div class="nota '+cor+'"></div><div class="creditos '+cor+'"></div><div class="situacao '+cor+'"></div><br class="clear" /><p class="alinhamento-direita"><input value="Adicionar Disciplina" class="botao-nova-disciplina" type="button" onclick="adicionar_disciplina('+sem+')" /></p></div>';
+	var conteudo = $('<div id="semestre-'+sem+'" class="semestre sem-'+cor+'"><div class="nome-semestre">20<input type="textbox" class="ano sem-'+cor+'" />/<input type="textbox" class="sem sem-'+cor+'" /></div><div class="disciplina '+cor+'"></div><div class="nota '+cor+'"></div><div class="creditos '+cor+'"></div><div class="situacao '+cor+'"></div><br class="clear" /><p class="alinhamento-direita"><input value="Adicionar Disciplina" class="botao-nova-disciplina" type="button" onclick="adicionar_disciplina('+sem+')" /></p></div>').hide();
 	$("#calculadora").append(conteudo);
+	conteudo.show('normal');
 
 	adicionar_disciplina(sem);
 
@@ -77,7 +82,7 @@ calcula_ira = function() {
 
 		if (!isNaN(temp)) {
 			// Determina o valor final do IRA
-			var ira = (ncc / ci) * (2 - 2 * cd / ci + cs / ci) * 1000;
+			var ira = (ncc / ci) * (2 - (2 * cd / ci + cs / ci)) * 1000;
 			ira = Math.round(ira);
 
 			// Mostra o IRA na input
